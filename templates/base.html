@@ -10,6 +10,16 @@
 </head>
 <body>
 <a href="{% url 'articles:list' %}">LOGO</a>
+<nav>
+    <ul>
+        <li>
+            <form class="logout-link" action="{%  url "accounts:logout" %}" method="post">
+                {%  csrf_token %}
+                <button type="submit">logout</button>
+            </form>
+        </li>
+    </ul>
+</nav>
 {% block content %}
 
 {% endblock %}
